@@ -77,7 +77,7 @@ function spiderfoot() {
 	cd $pwd
 	echo -e "${g}=-Spiderfoot-=${n}"
 	which spiderfoot > /dev/null 2>&1
-	if [ $? -eq 0 ]; then echo -e "${n}Spiderfoot alredy installed, skipping...${n}" && return; fi 
+	if [ $? -eq 0 ]; then echo -e "${n}Spiderfoot already installed, skipping...${n}" && return; fi 
 	if [ -d "spiderfoot/" ]; then echo -e "${n}Directory 'spiderfoot/' already exists, skipping...${n}" && return; fi
 	git clone "https://github.com/smicallef/spiderfoot" > /dev/null 2>&1
 	if [ $? -ne 0 ]; then echo -e "${b}Spiderfoot download failed.${n}" && return; fi 
@@ -102,7 +102,7 @@ function theharvester() {
 	cd $pwd
 	echo -e "${g}=-theHarvester-=${n}"
 	which theHarvester > /dev/null 2>&1
-	if [ $? -eq 0 ]; then echo -e "${n}theHarvester alredy installed, skipping...${n}" && return; fi 
+	if [ $? -eq 0 ]; then echo -e "${n}theHarvester already installed, skipping...${n}" && return; fi 
 	if [ -d "theHarvester/" ]; then echo -e "${n}Directory 'theHarvester/' already exists, skipping...${n}" && return; fi
 	git clone "https://github.com/laramies/theHarvester" > /dev/null 2>&1
 	if [ $? -ne 0 ]; then echo -e "${b}theHarvester download failed.${n}" && return; fi 
@@ -116,7 +116,7 @@ function theharvester() {
 function maltego() {
 	echo -e "${g}=-Maltego-=${n}"
 	which maltego > /dev/null 2>&1
-	if [ $? -eq 0 ]; then echo -e "${n}Maltego alredy installed, skipping...${n}" && return; fi 
+	if [ $? -eq 0 ]; then echo -e "${n}Maltego already installed, skipping...${n}" && return; fi 
 	sudo dpkg -l maltego > /dev/null 2>&1
 	if [ $? -eq 0 ]; then echo -e "${b}Maltego already installed, skipping...${n}" && return; fi
 	wget -nc "https://maltego-downloads.s3.us-east-2.amazonaws.com/linux/Maltego.v4.3.0.deb" > /dev/null 2>&1
