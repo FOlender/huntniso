@@ -137,7 +137,7 @@ function Nessus() {
 	if [ $? -ne 0 ]; then echo -e "${b}Nessus installation failed.${n}" && return; fi
 	sudo /bin/systemctl start nessusd.service > /dev/null 2>&1
 	if [ $? -ne 0 ]; then echo -e "${b}Nessus initialization failed.${n}" && return; fi
-	echo -e "${g}Nessus web access (Registration will be requested during setup to get an activation code and user/pass): https://127.0.0.1:8834/{n}" 
+	echo -e "${g}Nessus web access (Registration will be requested during setup to get an activation code and user/pass): https://127.0.0.1:8834/${n}" 
 }
 
 # RITA.
