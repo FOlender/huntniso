@@ -131,6 +131,7 @@ function Nessus() {
 	echo -e "${g}=-Nessus-=${n}"
 	sudo dpkg -l nessus > /dev/null 2>&1
 	if [ $? -eq 0 ]; then echo -e "${n}Nessus is already installed, skipping...${n}" && return; fi
+
 	wget -nc "https://www.tenable.com/downloads/api/v1/public/pages/nessus/downloads/16125/download?i_agree_to_tenable_license_agreement=true" -O "Nessus-10.1.2-ubuntu1110_amd64.deb" > /dev/null 2>&1
 	if [ $? -ne 0 ]; then echo -e "${b}Nessus installer already exists in $pwd.${n}" && return; fi
 	sudo dpkg -i "Nessus-10.1.2-ubuntu1110_amd64.deb" > /dev/null 2>&1
